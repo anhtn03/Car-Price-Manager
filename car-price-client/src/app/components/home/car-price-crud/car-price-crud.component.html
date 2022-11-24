@@ -1,0 +1,65 @@
+<div class="card">
+    <div class="button">
+        <button pButton pRipple label="Thêm Giá Xe" icon="pi pi-plus" class="p-button-success" (click)="openAdd()"></button>
+        <button pButton PRipple icon="pi pi-trash" class="p-button-danger" (click)="deleteSelectedItem()"></button>
+    </div>
+    <p-table [value]="Items" [paginator]="true" [(selection)]="selectedItems" [rowHover]="true" dataKey="id" currentPageReportTemplate="Hiển thị {first} trong {last} tổng số {totalRecords} mục" [showCurrentPageReport]="true">
+        <ng-template pTemplate="caption">
+            <div class="p-d-flex p-ai-center p-jc-between " style="display: flex">
+                <h2 class="p-m-0">Gia xe oto</h2>
+                <span class="p-input-icon-left">
+                    <i class="pi pi-search"></i>
+                    <input pInputText type="text" input="dt.filterGlobal($event.target.value, 'contains')" placeholder="Search..." class="cay">
+                </span>
+            </div>
+        </ng-template>
+        <ng-template pTemplate="header" class="header">
+            <tr>
+                <th style="width: 3rem">
+                    <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+                </th>
+                <th pSortableColumn="name">Tên xe
+                    <p-sortIcon field="name"></p-sortIcon>
+                </th>
+                <th pSortableColumn="image">Ảnh
+                    <p-sortIcon field="image"></p-sortIcon>
+                </th>
+                <th pSortableColumn="price">Giá bán
+                    <p-sortIcon field="price"></p-sortIcon>
+                </th>
+                <th pSortableColumn="category">dòng xe
+                    <p-sortIcon field="category"></p-sortIcon>
+                </th>
+                <th>
+                    <p field="storeaddress">Cửa hàng bán xe</p>
+                </th>
+                <th pSortableColumn="rating">đánh giá
+                    <p-sortIcon field="rating"></p-sortIcon>
+                </th>
+                <th></th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-Items>
+            <tr>
+                <td>
+                    <p-tableCheckbox [value]="Items"></p-tableCheckbox>
+                </td>
+                <td>{{Items.name}}</td>
+                <td>{{Items.price | currency:'USD'}}</td>
+                <td>{{Items.category}}</td>
+                <td>
+                    <p-rating [ngModel]="Items.rating" [readonly]="true" [cancel]="false"></p-rating>
+                </td>
+                <td>
+                    <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success p-mr-2" (click)="editPriceCar()"></button>
+                    <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-warning" (click)="deleteItem()"></button>
+                </td>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="summary">
+            <div class="p-d-flex p-ai-center p-jc-between">
+                Trong tổng số {{Items ? Items.length : 0 }} kết quả.
+            </div>
+        </ng-template>
+    </p-table>
+</div>

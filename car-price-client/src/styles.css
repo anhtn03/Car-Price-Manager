@@ -1,0 +1,23 @@
+body {
+    padding: 2em;
+    font-family: -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, Helvetica, Arial, sans-serif, “Apple Color Emoji”, “Segoe UI Emoji”, “Segoe UI Symbol”;
+}
+
+.p-datatable-header {
+    line-height: 0;
+}
+
+.p-datatable-wrapper {
+    line-height: 0;
+}
+
+
+/* #pr_id_1>p-paginator>div>span.p-paginator-current {
+    visibility: hidden;
+}
+
+#pr_id_1>p-paginator>div>span.p-paginator-current:after {
+    content: "";
+    visibility: visible;
+} */
+
