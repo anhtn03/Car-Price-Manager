@@ -1,7 +1,7 @@
 ﻿namespace CarPriceApi.CarPriceApi.Application.Infrastructure.Persistence.Repositories
 {
-    public interface IUnitOfWork
+    public interface IUnitOfWork : IDisposable
     {
-        Task SaveAsync(CancellationToken cancellationToken);
+        Task CommitAsync(CancellationToken cancellationToken);
     }
 }
