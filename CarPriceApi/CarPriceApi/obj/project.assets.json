@@ -5578,26 +5578,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\anh.nt15\\.nuget\\packages\\": {}
+    "/Users/mac/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\WorkSpace\\car-price-manager\\CarPriceApi\\CarPriceApi\\CarPriceApi.csproj",
+      "projectUniqueName": "/Users/mac/work space /car-price-manager/CarPriceApi/CarPriceApi/CarPriceApi.csproj",
       "projectName": "CarPriceApi",
-      "projectPath": "C:\\WorkSpace\\car-price-manager\\CarPriceApi\\CarPriceApi\\CarPriceApi.csproj",
-      "packagesPath": "C:\\Users\\anh.nt15\\.nuget\\packages\\",
-      "outputPath": "C:\\WorkSpace\\car-price-manager\\CarPriceApi\\CarPriceApi\\obj\\",
+      "projectPath": "/Users/mac/work space /car-price-manager/CarPriceApi/CarPriceApi/CarPriceApi.csproj",
+      "packagesPath": "/Users/mac/.nuget/packages/",
+      "outputPath": "/Users/mac/work space /car-price-manager/CarPriceApi/CarPriceApi/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\anh.nt15\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/mac/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -5651,7 +5649,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.106/RuntimeIdentifierGraph.json"
       }
     }
   }
