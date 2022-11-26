@@ -16,6 +16,21 @@
   <ItemGroup>
     <Folder Include="CarPriceApi.Application\Commands\" />
     <Folder Include="tests\CarPriceApi.BackgroundServices\" />
+    <Folder Include="CarPriceApi.Application\Extensions\" />
+    <Folder Include="CarPriceApi.Application\Core\" />
+    <Folder Include="CarPriceApi.Application\Core\Services\" />
+    <Folder Include="CarPriceApi.Application\Core\Services\Interfaces\" />
+    <Folder Include="CarPriceApi.Application\Core\Services\Impls\" />
+    <Folder Include="CarPriceApi.Application\Core\Services\Dtos\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="CarPriceApi.Application\Extensions\" />
+    <None Remove="CarPriceApi.Application\Core\" />
+    <None Remove="CarPriceApi.Application\Core\Services\" />
+    <None Remove="CarPriceApi.Application\Core\interface\" />
+    <None Remove="CarPriceApi.Application\Core\Services\Interfaces\" />
+    <None Remove="CarPriceApi.Application\Core\Services\Impls\" />
+    <None Remove="CarPriceApi.Application\Core\Services\Dtos\" />
+  </ItemGroup>
 </Project>
