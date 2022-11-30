@@ -1,10 +1,11 @@
-﻿using System;
-using CarPriceApi.CarPriceApi.Application.Infrastructure.Persistence.Models;
+﻿using CarPriceApi.CarPriceApi.Application.Infrastructure.Persistence.Models;
 
 namespace CarPriceApi.CarPriceApi.Application.Core.Dtos
 {
     public class ItemDto
     {
+        public long Id { get; set; }
+
         public string NameCar { get; set; }
 
         public byte[] Image { get; set; }
@@ -19,6 +20,7 @@ namespace CarPriceApi.CarPriceApi.Application.Core.Dtos
 
         public ItemDto(Item item)
         {
+            Id = item.Id;
             NameCar = item.NameCar;
             Image = item.Image;
             Price = item.Price;

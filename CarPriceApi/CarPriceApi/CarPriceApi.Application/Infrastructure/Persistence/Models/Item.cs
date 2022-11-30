@@ -2,6 +2,7 @@
 {
     public class Item
     {
+        public long Id { get; set; }
         public string NameCar { get; set; }
 
         public byte[] Image { get; set; }

@@ -8,9 +8,9 @@ namespace CarPriceApi.CarPriceApi.Application.Infrastructure.Repositories
         
         void UpdateAsync(TModel request);
 
-        void DeleteAsync(QueryParams<TModel> @params);
+        void DeleteAsync(QueryParams @params);
 
-        Task<QueryResult<TModel>> GetAllAsync(QueryParams<TModel> @params, CancellationToken cancellationToken);
+        Task<QueryResult> GetAllAsync(PaginatorParams<TModel> @params, CancellationToken cancellationToken);
 
 
     }
