@@ -1,4 +1,7 @@
-﻿using CarPriceApi.CarPriceApi.Application.Common;
+﻿using System;
+using System.Threading;
+using System.Threading.Tasks;
+using CarPriceApi.CarPriceApi.Application.Common;
 using CarPriceApi.CarPriceApi.Application.Infrastructure.Repositories;
 
 namespace CarPriceApi.CarPriceApi.Infrastructure.Persistence.Repositories

@@ -1,4 +1,6 @@
-﻿using CarPriceApi.CarPriceApi.Application.Common;
+﻿using System.Threading;
+using System.Threading.Tasks;
+using CarPriceApi.CarPriceApi.Application.Common;
 
 namespace CarPriceApi.CarPriceApi.Application.Core.Services.Interfaces
 {
