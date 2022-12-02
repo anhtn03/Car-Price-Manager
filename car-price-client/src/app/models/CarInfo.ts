@@ -1,15 +1,16 @@
 export interface CarInfo {
+    Id: number;
     
-    Name?: string;
+    Name: string;
 
-    Image?: string;
+    Image: string;
 
-    Price?: number;
+    Price: number;
 
-    Category?: string;
+    Category: string;
 
-    StoreAddress?: string;
+    StoreAddress: string;
 
-    review?: number;
+    rating: number;
 }
 

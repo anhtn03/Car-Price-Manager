@@ -1,0 +1,14 @@
+{
+    "data": 
+    [
+      {
+        "Id": 1,
+        "Name": "Volvo XC90",
+        "Image": "",
+        "Price": "5000000000",
+        "Category": "SUV",
+        "StoreAddress": "CarThanhXuan",
+        "Review": 5
+      }
+    ]
+}
