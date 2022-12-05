@@ -1,0 +1,21 @@
+<div class="card">
+    <div class="dataview d-flex">
+        <div class="left">Filter</div>
+        <div class="right">
+            <p-dataView [paginator]="true" [rows]="10">
+                <ng-template let-car pTemplate="listItem">
+                </ng-template>
+                <ng-template let-car pTemplate="gridItem">
+                </ng-template>
+            </p-dataView>
+            <ng-template pTemplate="paginatorleft" let-state>
+                <button type="button" pButton icon="pi-refresh"></button>
+            </ng-template>
+            <ng-template pTemplate="paginatorright">
+                <button type="button" pButton icon="pi-cloud-upload"></button>
+            </ng-template>
+            <ng-template let-item pTemplate="paginatordropdownitem">
+            </ng-template>
+        </div>
+    </div>
+</div>
