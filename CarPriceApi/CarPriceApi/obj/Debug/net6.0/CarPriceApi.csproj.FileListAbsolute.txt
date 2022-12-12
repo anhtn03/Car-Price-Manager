@@ -1,0 +1,7 @@
+C:\WorkSpace\car-price-manager\CarPriceApi\CarPriceApi\obj\Debug\net6.0\CarPriceApi.csproj.AssemblyReference.cache
+C:\WorkSpace\car-price-manager\CarPriceApi\CarPriceApi\obj\Debug\net6.0\CarPriceApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\WorkSpace\car-price-manager\CarPriceApi\CarPriceApi\obj\Debug\net6.0\CarPriceApi.AssemblyInfoInputs.cache
+C:\WorkSpace\car-price-manager\CarPriceApi\CarPriceApi\obj\Debug\net6.0\CarPriceApi.AssemblyInfo.cs
+C:\WorkSpace\car-price-manager\CarPriceApi\CarPriceApi\obj\Debug\net6.0\CarPriceApi.csproj.CoreCompileInputs.cache
+C:\WorkSpace\car-price-manager\CarPriceApi\CarPriceApi\obj\Debug\net6.0\CarPriceApi.MvcApplicationPartsAssemblyInfo.cs
+C:\WorkSpace\car-price-manager\CarPriceApi\CarPriceApi\obj\Debug\net6.0\CarPriceApi.MvcApplicationPartsAssemblyInfo.cache

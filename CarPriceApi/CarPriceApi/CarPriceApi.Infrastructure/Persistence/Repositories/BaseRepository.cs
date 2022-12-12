@@ -1,4 +1,7 @@
-﻿using CarPriceApi.CarPriceApi.Application.Common;
+﻿using System;
+using System.Threading;
+using System.Threading.Tasks;
+using CarPriceApi.CarPriceApi.Application.Common;
 using CarPriceApi.CarPriceApi.Application.Infrastructure.Repositories;
 
 namespace CarPriceApi.CarPriceApi.Infrastructure.Persistence.Repositories
@@ -16,14 +19,19 @@ namespace CarPriceApi.CarPriceApi.Infrastructure.Persistence.Repositories
             throw new NotImplementedException();
         }
 
-        public void DeleteAsync(QueryParams<TModel> @params)
+        public void DeleteAsync(QueryParams @params)
         {
             throw new NotImplementedException();
         }
 
-        public Task<QueryResult<TModel>> GetAllAsync(QueryParams<TModel> @params, CancellationToken cancellationToken)
+        public Task<QueryResult> GetAllAsync(PaginatorParams<TModel> @params, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            var queryParams = _dbcontext.Set<TModel>().AsQueryable();
+
+            if(@params.Filters != null)
+            {
+
+            }
         }
 
         public void UpdateAsync(TModel request)

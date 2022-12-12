@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-
 import { CarInfo } from '../app/models/CarInfo';
 
 @Injectable({
@@ -10,36 +9,49 @@ export class TestService {
 
   Image: string = ''
 
-  Category: string = 'Suv'
+  CategoryName: string[] = ["SUV", "CUV", "MPV", "SEDAN", "4X4"]
 
-  Store: string = 'CarHaNoi'
-
-  CarName: string = "Volvo XC90"
+  Name: string[] = ["Volvo XC90", "CX5", "CARNIVAL", "Vios","RAPTOR-F150"]
   
   constructor(private httpclient: HttpClient) { }
 
-  getItems() {
-    return this.httpclient.get<any>('http://localhost:4200/test/Itemapi/Items.Json')
+  getProduct() {
+    return this.httpclient.get<any>('src/test/product.json')
       .toPromise()
-      .then(res => <CarInfo[]>res.data)
-      .then(data => {return data})
-  }
+      .then((res) => <CarInfo[]>res.data)
+      .then(data => {
+        return data
+      })
+      }
 
-  generateItems(): CarInfo {
+  generateProducts(): CarInfo {
     const carInfo: CarInfo = {
-      Name: this.CarName,
+      Id: this.generateId(),
+      Name: this.generateCarName(), 
       Image: this.Image,
       Price: this.gereratePrice(),
-      Category: this.Category,
-      StoreAddress: this.Store,
-      review: this.gererateReview(),
+      Category: this.generateCategory(),
+      StoreAddress: "CarThanhXuan",
+      rating: this.gererateReview(),
     }
     return carInfo;
   }
 
+  generateCarName() {
+    return this.Name[Math.floor(Math.random() * Math.floor(5))]
+  }
+
+  generateCategory() {
+    return this.CategoryName[Math.floor(Math.random() * Math.floor(5))]
+  }
+
+  generateId() {
+    return Math.floor(Math.random() * 10)
+  }
+
   gereratePrice() {
     return Math.floor(Math.random() * Math.floor(250)+3)
-   }
+  }
   
   gererateReview() {
     return Math.floor(Math.random() * Math.floor(5))

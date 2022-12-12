@@ -4,17 +4,36 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+	<GenerateAssemblyInfo>false</GenerateAssemblyInfo> 
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Fizzler.Systems.HtmlAgilityPack" Version="1.2.1" />
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.46" />
+    <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.7" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.0.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="CarPriceApi.Application\Commands\" />
-    <Folder Include="CarPriceApi.Infrastructure\Persistence\EntityTypeConfigurations\" />
     <Folder Include="tests\CarPriceApi.BackgroundServices\" />
+    <Folder Include="CarPriceApi.Application\Extensions\" />
+    <Folder Include="CarPriceApi.Application\Core\" />
+    <Folder Include="CarPriceApi.Application\Core\Services\" />
+    <Folder Include="CarPriceApi.Application\Core\Services\Interfaces\" />
+    <Folder Include="CarPriceApi.Application\Core\Services\Impls\" />
+    <Folder Include="CarPriceApi.Application\Core\Services\Dtos\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="CarPriceApi.Application\Extensions\" />
+    <None Remove="CarPriceApi.Application\Core\" />
+    <None Remove="CarPriceApi.Application\Core\Services\" />
+    <None Remove="CarPriceApi.Application\Core\interface\" />
+    <None Remove="CarPriceApi.Application\Core\Services\Interfaces\" />
+    <None Remove="CarPriceApi.Application\Core\Services\Impls\" />
+    <None Remove="CarPriceApi.Application\Core\Services\Dtos\" />
+  </ItemGroup>
 </Project>

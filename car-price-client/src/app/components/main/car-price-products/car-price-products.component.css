@@ -1,0 +1,12 @@
+.card {
+    margin-top: 15rem;
+}
+
+.left {
+    width: 15rem;
+}
+
+.right {
+    width: 100%;
+    border-left: solid;
+}

@@ -1,4 +1,6 @@
-﻿using CarPriceApi.CarPriceApi.Application.Common;
+﻿using System.Threading;
+using System.Threading.Tasks;
+using CarPriceApi.CarPriceApi.Application.Common;
 
 namespace CarPriceApi.CarPriceApi.Application.Infrastructure.Repositories
 {
@@ -8,9 +10,9 @@ namespace CarPriceApi.CarPriceApi.Application.Infrastructure.Repositories
         
         void UpdateAsync(TModel request);
 
-        void DeleteAsync(QueryParams<TModel> @params);
+        void DeleteAsync(QueryParams @params);
 
-        Task<QueryResult<TModel>> GetAllAsync(QueryParams<TModel> @params, CancellationToken cancellationToken);
+        Task<QueryResult> GetAllAsync(PaginatorParams<TModel> @params, CancellationToken cancellationToken);
 
 
     }
