@@ -1,4 +1,4 @@
-export interface PageChangedItem {
+export interface PageChangedProduct {
     skip: number;
 
     take: number;

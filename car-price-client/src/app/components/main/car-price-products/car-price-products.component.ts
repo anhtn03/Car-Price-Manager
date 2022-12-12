@@ -2,9 +2,11 @@ import {
   Component,
   OnInit,
 } from '@angular/core';
+import { BehaviorSubject, take } from 'rxjs';
 
 import { CarInfo } from 'src/app/models/CarInfo';
-import { TestService } from 'src/test/test.service';
+import { PageChangedProduct } from 'src/app/models/PageChangedItem';
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-car-price-products',
@@ -12,10 +14,17 @@ import { TestService } from 'src/test/test.service';
   styleUrls: ['./car-price-products.component.css']
 })
 export class CarPriceProductsComponent implements OnInit {
-  cars: CarInfo[];
-  constructor(private testService: TestService) { }
+  onPageChanged$ = new BehaviorSubject<PageChangedProduct>({
+    skip : 0,
+    take : 50,
+    total : 0,
+  })
+  dataSource: CarInfo[];
+
+  constructor(private productService: ProductService) { }
 
   ngOnInit() {
+    this.productService.getAllProducts
   }
 
 }
