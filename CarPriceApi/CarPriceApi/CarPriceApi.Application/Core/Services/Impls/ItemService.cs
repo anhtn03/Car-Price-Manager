@@ -3,6 +3,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using CarPriceApi.CarPriceApi.Application.Common;
 using CarPriceApi.CarPriceApi.Application.Core.Services.Interfaces;
+using CarPriceApi.CarPriceApi.Application.Infrastructure.Persistence.Models;
 using CarPriceApi.CarPriceApi.Application.Infrastructure.Persistence.Repositories;
 using CarPriceApi.CarPriceApi.Application.Infrastructure.Repositories;
 
@@ -21,7 +22,7 @@ namespace CarPriceApi.CarPriceApi.Application.Core.Impls
 
         public async Task<QueryResult> GetItemAsync(CancellationToken cancellationToken = default)
         {
-            var result = await _itemRepository.GetAllAsync(new QueryParams(), cancellationToken);
+            var result = await _itemRepository.GetAllAsync(new PaginatorParams<Item>(), cancellationToken);
             return result;
         }
     }

@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/mac/work space /car-price-manager/CarPriceApi/CarPriceApi/CarPriceApi.csproj": {}
+    "C:\\WorkSpace\\car-price-manager\\CarPriceApi\\CarPriceApi\\CarPriceApi.csproj": {}
   },
   "projects": {
-    "/Users/mac/work space /car-price-manager/CarPriceApi/CarPriceApi/CarPriceApi.csproj": {
+    "C:\\WorkSpace\\car-price-manager\\CarPriceApi\\CarPriceApi\\CarPriceApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mac/work space /car-price-manager/CarPriceApi/CarPriceApi/CarPriceApi.csproj",
+        "projectUniqueName": "C:\\WorkSpace\\car-price-manager\\CarPriceApi\\CarPriceApi\\CarPriceApi.csproj",
         "projectName": "CarPriceApi",
-        "projectPath": "/Users/mac/work space /car-price-manager/CarPriceApi/CarPriceApi/CarPriceApi.csproj",
-        "packagesPath": "/Users/mac/.nuget/packages/",
-        "outputPath": "/Users/mac/work space /car-price-manager/CarPriceApi/CarPriceApi/obj/",
+        "projectPath": "C:\\WorkSpace\\car-price-manager\\CarPriceApi\\CarPriceApi\\CarPriceApi.csproj",
+        "packagesPath": "C:\\Users\\anh.nt15\\.nuget\\packages\\",
+        "outputPath": "C:\\WorkSpace\\car-price-manager\\CarPriceApi\\CarPriceApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/mac/.config/NuGet/NuGet.Config"
+          "C:\\Users\\anh.nt15\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,6 +40,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Fizzler.Systems.HtmlAgilityPack": {
+              "target": "Package",
+              "version": "[1.2.1, )"
+            },
+            "HtmlAgilityPack": {
+              "target": "Package",
+              "version": "[1.11.46, )"
+            },
             "Microsoft.AspNetCore.Hosting": {
               "target": "Package",
               "version": "[2.2.7, )"
@@ -61,7 +71,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -73,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.106/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
