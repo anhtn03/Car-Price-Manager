@@ -8,6 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="tests\**" />
+    <Content Remove="tests\**" />
+    <EmbeddedResource Remove="tests\**" />
+    <None Remove="tests\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Fizzler.Systems.HtmlAgilityPack" Version="1.2.1" />
     <PackageReference Include="HtmlAgilityPack" Version="1.11.46" />
     <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.7" />
@@ -18,13 +25,14 @@
 
   <ItemGroup>
     <Folder Include="CarPriceApi.Application\Commands\" />
-    <Folder Include="tests\CarPriceApi.BackgroundServices\" />
     <Folder Include="CarPriceApi.Application\Extensions\" />
     <Folder Include="CarPriceApi.Application\Core\" />
     <Folder Include="CarPriceApi.Application\Core\Services\" />
     <Folder Include="CarPriceApi.Application\Core\Services\Interfaces\" />
     <Folder Include="CarPriceApi.Application\Core\Services\Impls\" />
     <Folder Include="CarPriceApi.Application\Core\Services\Dtos\" />
+    <Folder Include="CarPriceApi.Crawler\Crawler\" />
+    <Folder Include="CarPriceApi.Crawler\Infrastructure\" />
   </ItemGroup>
 
   <ItemGroup>

@@ -3,11 +3,11 @@ using System.Linq.Expressions;
 
 namespace CarPriceApi.CarPriceApi.Application.Common
 {
-    public class QueryParams
+    public class QueryParams<TModel>
     {
-        public Expression<Func<Item, bool>> Filters { get; private set; }
+        public Expression<Func<TModel, bool>> Filters { get; private set; }
 
-        public QueryParams(Expression<Func<Item, bool>> filters)
+        public QueryParams(Expression<Func<TModel, bool>> filters)
         {
            Filters = filters;
         }

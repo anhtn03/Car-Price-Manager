@@ -2,11 +2,11 @@
 
 namespace CarPriceApi.CarPriceApi.Application.Common
 {
-    public class QueryResult
+    public class QueryResult<TModel>
     {
-        public List<ItemDto> Results { get; set; }
+        public List<TModel> Results { get; set; }
 
-        public QueryResult(List<ItemDto> result)
+        public QueryResult(List<TModel> result)
         {
             Results = result;
         } 

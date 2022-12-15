@@ -1,8 +1,7 @@
-﻿using System;
-using System.Threading;
-using System.Threading.Tasks;
-using CarPriceApi.CarPriceApi.Application.Common;
+﻿using CarPriceApi.CarPriceApi.Application.Common;
 using CarPriceApi.CarPriceApi.Application.Infrastructure.Repositories;
+using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace CarPriceApi.CarPriceApi.Infrastructure.Persistence.Repositories
 {
@@ -19,19 +18,36 @@ namespace CarPriceApi.CarPriceApi.Infrastructure.Persistence.Repositories
             throw new NotImplementedException();
         }
 
-        public void DeleteAsync(QueryParams @params)
+        public void DeleteAsync(QueryParams<TModel> @params)
         {
             throw new NotImplementedException();
         }
 
-        public Task<QueryResult> GetAllAsync(PaginatorParams<TModel> @params, CancellationToken cancellationToken)
+        public async Task<PaginatorResult<TModel>> GetAllAsync(PaginatorParams<TModel> @paginatorParams, CancellationToken cancellationToken)
+        {
+            var queryParams = _dbcontext.Set<TModel>().AsQueryable();
+
+            if(@paginatorParams.Filters != null)
+            {
+                queryParams = queryParams.Where(@paginatorParams.Filters).AsNoTracking();
+            }
+            var data = await queryParams.Skip(@paginatorParams.Skip).Take(@paginatorParams.Take).ToListAsync(cancellationToken);
+            var total = await queryParams.CountAsync(cancellationToken);
+
+            return new PaginatorResult<TModel>(data, total);
+        }
+
+        public async Task<QueryResult<TModel>> GetAsync(QueryParams<TModel> @params, CancellationToken cancellationToken)
         {
             var queryParams = _dbcontext.Set<TModel>().AsQueryable();
 
             if(@params.Filters != null)
             {
-
+                queryParams = queryParams.Where(@params.Filters).AsNoTracking();
             }
+            var result = await queryParams.ToListAsync(cancellationToken);
+
+            return new QueryResult<TModel>(result);
         }
 
         public void UpdateAsync(TModel request)

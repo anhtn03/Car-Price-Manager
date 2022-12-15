@@ -14,7 +14,7 @@ namespace CarPriceApi.CarPriceApi.Crawler.Helpers
             return node;
         }
 
-        public static List<HtmlNode> GetMutiNote(HtmlDocument document, string querySelector) 
+        public static List<HtmlNode> GetMutiElement(HtmlDocument document, string querySelector) 
         {
             var node = document
                 .DocumentNode
