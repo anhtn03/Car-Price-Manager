@@ -13,7 +13,7 @@ namespace CarPriceApi.CarPriceApi.Infrastructure.Persistence.Repositories
         {
             _dbcontext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
         }
-        public Task CreateAsync(TModel item)
+        public Task CreateAsync(TModel @request)
         {
             throw new NotImplementedException();
         }

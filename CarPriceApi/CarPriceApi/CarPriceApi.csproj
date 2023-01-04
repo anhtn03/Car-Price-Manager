@@ -31,8 +31,6 @@
     <Folder Include="CarPriceApi.Application\Core\Services\Interfaces\" />
     <Folder Include="CarPriceApi.Application\Core\Services\Impls\" />
     <Folder Include="CarPriceApi.Application\Core\Services\Dtos\" />
-    <Folder Include="CarPriceApi.Crawler\Crawler\" />
-    <Folder Include="CarPriceApi.Crawler\Infrastructure\" />
   </ItemGroup>
 
   <ItemGroup>

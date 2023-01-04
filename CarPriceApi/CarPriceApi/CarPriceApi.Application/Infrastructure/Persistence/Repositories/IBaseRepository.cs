@@ -6,9 +6,9 @@ namespace CarPriceApi.CarPriceApi.Application.Infrastructure.Repositories
 {
     public interface IBaseRepository<TModel>
     {
-        Task CreateAsync(TModel item);
+        Task CreateAsync(TModel @request);
         
-        void UpdateAsync(TModel request);
+        void UpdateAsync(TModel @request);
 
         void DeleteAsync(QueryParams<TModel> @params);
 

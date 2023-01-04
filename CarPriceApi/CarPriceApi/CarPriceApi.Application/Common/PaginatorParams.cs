@@ -22,5 +22,11 @@ namespace CarPriceApi.CarPriceApi.Application.Common
             SortField = sortfield;
             SortDirection = sortdirection;
         }
+
+        public PaginatorParams(int skip, int take)
+        {
+            Skip = skip;
+            Take = take;
+        }
     }
 }

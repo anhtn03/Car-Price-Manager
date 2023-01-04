@@ -3,9 +3,9 @@ using CarPriceApi.CarPriceApi.Application.Infrastructure.Repositories;
 
 namespace CarPriceApi.CarPriceApi.Infrastructure.Persistence.Repositories
 {
-    public class ItemRepository : BaseRepository<Product>, IItemRepository
+    public class ProductRepository : BaseRepository<Product>, IItemRepository
     {
-        public ItemRepository(MsSqlCarPriceApiDbContext msSqlCarPriceApiDbContext)
+        public ProductRepository(MsSqlCarPriceApiDbContext msSqlCarPriceApiDbContext)
             : base(msSqlCarPriceApiDbContext)
         {}
     }

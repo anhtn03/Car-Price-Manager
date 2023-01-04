@@ -8,7 +8,7 @@
 
         public byte[] Image { get; set; }
 
-        public float Price { get; set; }
+        public double Price { get; set; }
 
         public int Category { get; set; }
     }

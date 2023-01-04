@@ -7,6 +7,11 @@ namespace CarPriceApi.CarPriceApi.Crawler.Helpers
     {
         public static HtmlNode GetPrice(HtmlDocument document, string querySelector) 
         {
+            if(string.IsNullOrEmpty(querySelector))
+            {
+                throw new ArgumentNullException("Price Query Selector is invalid");
+            }
+
             var node = document
                 .DocumentNode
                 .QuerySelector(querySelector);
@@ -14,8 +19,13 @@ namespace CarPriceApi.CarPriceApi.Crawler.Helpers
             return node;
         }
 
-        public static List<HtmlNode> GetMutiElement(HtmlDocument document, string querySelector) 
+        public static List<HtmlNode> GetMultiElement(HtmlDocument document, string querySelector) 
         {
+            if(string.IsNullOrEmpty(querySelector))
+            {
+                throw new ArgumentNullException("multi element Query Selector is invalid");
+            }
+
             var node = document
                 .DocumentNode
                 .QuerySelectorAll(querySelector)
@@ -23,5 +33,7 @@ namespace CarPriceApi.CarPriceApi.Crawler.Helpers
 
             return node;
         }
+
+
     }
 }
